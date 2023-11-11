@@ -55,7 +55,7 @@ public class LoginOTP extends AppCompatActivity {
 
         phoneNumber = Objects.requireNonNull(getIntent().getExtras()).getString("phone");
 
-        AndroidUtil.showToast(getApplicationContext(),phoneNumber);
+
         sendOtp(phoneNumber, false);
 
 

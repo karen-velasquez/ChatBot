@@ -2,6 +2,7 @@ package com.example.chatbot;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -28,11 +29,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 public class MainActivity extends AppCompatActivity {
 
 
-    Button btnObjetivo;
-    Button btnProgreso;
+    CardView btnObjetivo;
+    CardView btnProgreso;
 
-    Button btnObjetivoAdmin;
-    Button btnProgresoAdmin;
+    CardView btnObjetivoAdmin;
+    CardView btnProgresoAdmin;
 
     Button btnAdmin;
     //usuario que ingreso
@@ -59,10 +60,9 @@ public class MainActivity extends AppCompatActivity {
         UserModel theadmin = new UserModel();
         theadmin.setPhone("+59177777777");
         theadmin.setUserId("2wA5U7WfLjXYMVE106fFu4YmbXq2");
-        theadmin.setUsername("admin");
+        theadmin.setUsername("ChatBot");
         theadmin.setTypeUser("admin");
 
-        AndroidUtil.showToast(getApplicationContext(),FirebaseUtil.currentUserId());
 
 
         btnObjetivo.setOnClickListener(v -> {
@@ -93,11 +93,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if(FirebaseUtil.currentUserId().equals("2wA5U7WfLjXYMVE106fFu4YmbXq2")){
-            AndroidUtil.showToast(getApplicationContext(),"admin");
             btnObjetivo.setVisibility(View.INVISIBLE);
             btnProgreso.setVisibility(View.INVISIBLE);
         }else{
-            AndroidUtil.showToast(getApplicationContext(),"useeer");
             btnObjetivoAdmin.setVisibility(View.GONE);
             btnProgresoAdmin.setVisibility(View.GONE);
         }

@@ -123,14 +123,15 @@ public class ChatActivityProgress extends AppCompatActivity {
     void ProgressQuestions() {
         step = step + 1;
         Map<String, String> m = new HashMap<String, String>();
-        m.put("1", "Hola, aquí podemos registrar tu progreso");
-        m.put("2", "Te dare un conjunto de complidos, escoje el que mas se ajuste a lo que haya mejorado esta semana o con el que mas te identifiques");
-        m.put("3", "Escribe en esta semana que día has estado mas motivado ");
-        m.put("4", "¿Que has hecho para que ese dia puedas estar motivado?");
-        m.put("5", "Cuentame en una escala del 1 al 10, donde 10 es que el problema ya se ha resulto y 1 todo lo contrario en que numero estarias el dia de hoy");
-        m.put("6", "Que estas haciendo para que ese numero no sea mas bajo o tal vez 0");
-        m.put("7", "¿Como te darias cuenta que ese numero subio? ");
-        m.put("8", "Ten un buen día ");
+        m.put("1", "Hola, es un gusto tenerte por aquí. En esta sección podemos registrar tu progreso");
+        m.put("2", "¿Qué ha mejorado desde tu última sesión?");
+        m.put("3", "Si la persona más importante para ti describiera tu progreso ¿que te diría?");
+        m.put("4", "Ahora escribe algo que te haya sido útil  en la última semana para continuar con tu mejora");
+        m.put("5", "¿Si la persona más importante para ti hiciera un elogio a tu recuperación o a la forma en que afrontas esta situación que te diría?");
+        m.put("6", "Anota 1 o 2 momentos que hayas sentido que el problema ha mejorado");
+        m.put("7", "¿Cómo lograste que eso ocurriera?");
+        m.put("8", "¿Cómo has logrado hacer frente a este problema? ");
+        m.put("9", "Genial, registre tu progreso!!!");
 
         //prueba de mensaje
         sendMessageToChatBot(m.get(String.valueOf(step)));

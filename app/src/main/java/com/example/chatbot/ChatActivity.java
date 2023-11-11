@@ -48,6 +48,8 @@ public class ChatActivity extends AppCompatActivity {
     TextView otherUsername;
     RecyclerView recyclerView;
 
+    ImageButton btnback;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
